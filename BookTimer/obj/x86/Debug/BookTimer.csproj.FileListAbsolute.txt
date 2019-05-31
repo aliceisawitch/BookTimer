@@ -215,8 +215,8 @@ C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\resources.en-us.res
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758480200000000.json
-C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\MainPage.xbf
-C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\MainPage.g.i.cs
-C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\MainPage.g.cs
-C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\MainPage.xaml
-C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\MainPage.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\AddBookPage.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.g.i.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.g.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.xaml
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.xbf

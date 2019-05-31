@@ -409,8 +409,8 @@
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\MainPage.xbf">
-      <PackagePath>Views\MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\AddBookPage.xbf">
+      <PackagePath>Views\AddBookPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
