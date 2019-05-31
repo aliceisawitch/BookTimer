@@ -7,12 +7,7 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="RowDefinitions" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
-    </RootType>
-    <RootType FullName="BookTimer.AddBookPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid" />
+    <RootType FullName="BookTimer.Views.AddBookPage" />
   </Roots.RootTypes>
 </Roots>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,10 @@ namespace BookTimer.Views
         public AddBookPage()
         {
             this.InitializeComponent();
+            // This part was added to display application on windows same way as on mobile
+            ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
         }
     }
 }
