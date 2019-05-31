@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Border Background="Blue" BorderBrush="Black" HorizontalAlignment="Center" Height="100" Margin="0,10,0,0" VerticalAlignment="Top" Width="360"/>
 
     </Grid>
 </Page>

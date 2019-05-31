@@ -2,5 +2,7 @@
 .vs/
 exampleApiCall.txt
 BookTimerMockup.pdf
-bin/
-obj/
+BookTimer/bin/*
+BookTimer/obj/*
+BookTimer/obj
+BookTimer/bin
