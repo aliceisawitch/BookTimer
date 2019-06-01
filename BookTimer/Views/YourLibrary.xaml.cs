@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,21 +20,16 @@ namespace BookTimer.Views
     /// <summary>
     /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
     /// </summary>
-    public sealed partial class AddBookPage : Page
+    public sealed partial class BlankPage1 : Page
     {
-        public AddBookPage()
+        public BlankPage1()
         {
             this.InitializeComponent();
-           
-            // This part was added to display application on windows same way as on mobile
-            ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
-
         }
 
-        private void YourLibraryButton_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddBookPage_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BlankPage1));
+            this.Frame.Navigate(typeof(AddBookPage));
         }
     }
 }

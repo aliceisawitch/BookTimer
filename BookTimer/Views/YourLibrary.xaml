@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="BookTimer.Views.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BookTimer.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+    <Grid>
+        
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Background="CornflowerBlue">
+                <TextBlock Text="Book Timer" FontSize="50" Style="{ThemeResource HeaderTextBlockStyle}" Margin="15" HorizontalAlignment="Center" Foreground="White"/>
+
+            </StackPanel>
+            <StackPanel  Background="Gray" Grid.Row="1">
+                <TextBlock Text="Your library" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="28" Margin="15" Foreground="White" HorizontalAlignment="Center"/>
+
+
+            </StackPanel>
+        <Button HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click"/>
+    </Grid>
+</Page>
