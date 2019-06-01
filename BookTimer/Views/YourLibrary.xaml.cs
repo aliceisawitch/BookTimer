@@ -20,9 +20,9 @@ namespace BookTimer.Views
     /// <summary>
     /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
     /// </summary>
-    public sealed partial class BlankPage1 : Page
+    public sealed partial class YourLibraryPage : Page
     {
-        public BlankPage1()
+        public YourLibraryPage()
         {
             this.InitializeComponent();
         }
