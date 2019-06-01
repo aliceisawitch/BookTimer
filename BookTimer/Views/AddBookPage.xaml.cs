@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using BookTimer.Views;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,7 +36,12 @@ namespace BookTimer.Views
 
         private void YourLibraryButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BlankPage1));
+            this.Frame.Navigate(typeof(YourLibraryPage));
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
