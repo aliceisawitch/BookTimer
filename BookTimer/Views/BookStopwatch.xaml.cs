@@ -74,7 +74,7 @@ namespace BookTimer.Views
             }
             else
             {
-                time +=+ hours;
+                time += minutes;
             }
             time += ":";
             if (seconds < 10)

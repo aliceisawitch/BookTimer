@@ -38,9 +38,9 @@
             <Image Source="/Assets/LibraryBackground.jpg"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2">
-            <TextBlock x:Name="tbAutor" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Autor"/>
-            <TextBlock x:Name="tbTytul" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Tytuł"/>
-            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" TextWrapping="WrapWholeWords" Text="Overall time spend on this title:"/>
+            <TextBlock x:Name="tbAutor" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Autor"/>
+            <TextBlock x:Name="tbTytul" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Tytuł"/>
+            <TextBlock Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" TextWrapping="WrapWholeWords" Text="Overall time spend on this title:"/>
             <TextBlock x:Name="tbTimer" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Text="00:00:00"/>
 
         </StackPanel>
