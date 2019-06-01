@@ -26,5 +26,14 @@ namespace BookTimer.Views
         {
             this.InitializeComponent();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+          
+
+        }
+        
     }
 }

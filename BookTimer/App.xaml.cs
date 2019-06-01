@@ -30,6 +30,7 @@ namespace BookTimer
         public App()
         {
             this.InitializeComponent();
+           
             this.Suspending += OnSuspending;
         }
 

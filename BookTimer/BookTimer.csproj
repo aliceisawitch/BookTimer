@@ -135,15 +135,16 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\library.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\add.png" />
+    <Content Include="Assets\library.png" />
+    <Content Include="Assets\LibraryBackground.jpg" />
     <Content Include="Assets\search.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\add_icon.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Assets\start2.png" />
+    <Content Include="Assets\start3.png" />
+    <Content Include="Assets\stop2.png" />
+    <Content Include="Assets\timer.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

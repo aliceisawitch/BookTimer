@@ -9,7 +9,10 @@
     Background="{ThemeResource AppBarBackgroundThemeBrush}">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto"/>
@@ -18,15 +21,23 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <StackPanel Background="CornflowerBlue">
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Background="CornflowerBlue">
                 <TextBlock Text="Book Timer" FontSize="50" Style="{ThemeResource HeaderTextBlockStyle}" Margin="15" HorizontalAlignment="Center" Foreground="White"/>
 
             </StackPanel>
-            <StackPanel  Background="Gray" Grid.Row="1">
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Background="Gray" Grid.Row="1">
                 <TextBlock Text="Your library" Style="{ThemeResource HeaderTextBlockStyle}" FontSize="28" Margin="15" Foreground="White" HorizontalAlignment="Center"/>
+            <Image Opacity="0.65" Source="/Assets/library.png"/>
 
-
+        </StackPanel>
+        <Button Grid.Column="2" HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click">
+            <Button.Background>
+                <SolidColorBrush Opacity="0"/>
+               
+            </Button.Background>
+            <StackPanel>
+                <Image Opacity="0.65" Source="/Assets/add.png"/>
             </StackPanel>
-        <Button HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click"/>
+        </Button>
     </Grid>
 </Page>

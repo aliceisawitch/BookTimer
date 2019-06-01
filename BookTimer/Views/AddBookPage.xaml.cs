@@ -26,7 +26,7 @@ namespace BookTimer.Views
         public AddBookPage()
         {
             this.InitializeComponent();
-           
+            
             // This part was added to display application on windows same way as on mobile
             ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
