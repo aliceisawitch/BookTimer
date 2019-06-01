@@ -57,7 +57,7 @@
             
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button  x:Name="stopButton">
+            <Button Click="StopButton_Click" x:Name="stopButton">
                 <Button.Background>
                     <SolidColorBrush Opacity="0"/>
                 </Button.Background>

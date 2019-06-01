@@ -30,6 +30,7 @@
             <Image Opacity="0.65" Source="/Assets/library.png"/>
 
         </StackPanel>
+        <Button Width="100" Height="100" Grid.Row="3" Click="Button_Click"/>
         <Button Grid.Column="2" HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click">
             <Button.Background>
                 <SolidColorBrush Opacity="0"/>
