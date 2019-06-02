@@ -53,9 +53,9 @@ namespace BookTimer.GoogleBooksApiCnct
 
             System.Diagnostics.Debug.WriteLine("BooksXaml: " + books.ToString());
             System.Diagnostics.Debug.WriteLine("Number of elements on booksList: " + books.Count());
-            
+
         }
-        
+
         public APIconnection(HttpClient httpClient)
         {
             this.HttpClient = httpClient;

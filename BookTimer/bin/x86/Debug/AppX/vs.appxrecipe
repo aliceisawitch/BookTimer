@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-06-02T17:46:01.182</Modified>
+      <Modified>2019-06-02T18:11:45.370</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\BookTimer.exe">
       <PackagePath>entrypoint\BookTimer.exe</PackagePath>
-      <Modified>2019-06-02T17:46:00.789</Modified>
+      <Modified>2019-06-02T18:11:44.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -205,6 +205,14 @@
     <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\runtime.win7.system.private.uri\4.3.0\runtimes\win\lib\netcore50\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
       <Modified>2016-11-05T03:56:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\sqlite.net-pcl\3.1.1\lib\Windows8\SQLite.Net.Platform.WinRT.dll">
+      <PackagePath>SQLite.Net.Platform.WinRT.dll</PackagePath>
+      <Modified>2015-11-06T16:18:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\sqlite.net.core-pcl\3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
+      <PackagePath>SQLite.Net.dll</PackagePath>
+      <Modified>2015-11-06T16:18:40.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\system.appcontext\4.3.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -598,19 +606,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-06-02T17:46:00.553</Modified>
+      <Modified>2019-06-02T18:11:44.717</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\AddBookPage.xbf">
       <PackagePath>Views\AddBookPage.xbf</PackagePath>
-      <Modified>2019-06-02T17:46:00.554</Modified>
+      <Modified>2019-06-02T18:11:44.717</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\BookStopwatch.xbf">
       <PackagePath>Views\BookStopwatch.xbf</PackagePath>
-      <Modified>2019-06-02T17:46:00.554</Modified>
+      <Modified>2019-06-02T18:11:44.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\YourLibrary.xbf">
       <PackagePath>Views\YourLibrary.xbf</PackagePath>
-      <Modified>2019-06-02T17:46:00.554</Modified>
+      <Modified>2019-06-02T18:11:44.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -618,11 +626,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-06-02T12:11:56.176</Modified>
+      <Modified>2019-06-02T18:08:05.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Core\BookTimer.exe">
       <PackagePath>BookTimer.exe</PackagePath>
-      <Modified>2019-06-02T17:46:01.176</Modified>
+      <Modified>2019-06-02T18:11:45.366</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
