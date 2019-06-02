@@ -39,8 +39,13 @@ namespace BookTimer.Views
             ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
-            con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+            try
+            {
+                con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+
             con.CreateTable<Book>();
+            }
+            catch (Exception ex) { };
         }
 
         private void YourLibraryButton_Click(object sender, RoutedEventArgs e)
@@ -53,7 +58,7 @@ namespace BookTimer.Views
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
             apiConnection.LoadGoogleData();
-            XDocument xdoc = apiConnection.parseGoogleData();
+            List<Book> books = apiConnection.GetBooks();
             
         }
 
@@ -72,7 +77,8 @@ namespace BookTimer.Views
                 result = String.Format("{0} {1} {2}", item.Id, item.Author, item.Title);
                 Debug.WriteLine(result);
             }
-                
+               
+
 
         }
     }

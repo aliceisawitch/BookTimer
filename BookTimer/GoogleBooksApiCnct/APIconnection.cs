@@ -20,7 +20,7 @@ namespace BookTimer.GoogleBooksApiCnct
         {
             try
             {
-                dataGoogle = await HttpClient.GetStringAsync(new Uri(MockUpGet)); //await to słowo klucz dla funkcji asynchronicznej 
+                this.dataGoogle = await HttpClient.GetStringAsync(new Uri(MockUpGet)); //await to słowo klucz dla funkcji asynchronicznej 
             }
             catch (Exception ex)
             {
@@ -28,33 +28,41 @@ namespace BookTimer.GoogleBooksApiCnct
                 await dlgError.ShowAsync();
                 App.Current.Exit();
             }
-            
-        }
-        public XDocument parseGoogleData()
-        {
-            
+            string googleData = dataGoogle;
+            System.Diagnostics.Debug.WriteLine("Books: " + dataGoogle);
             XDocument googleDataxml = (XDocument)JsonConvert.DeserializeXNode(dataGoogle, "root");
-            Console.WriteLine(googleDataxml.ToString());
+            System.Diagnostics.Debug.WriteLine("BooksXaml: " + googleDataxml.ToString());
+
+
             try
             {
-                books = (from item in googleDataxml.Descendants("item")
+                books = (from item in googleDataxml.Descendants("items")
                          select new Book
                          {
                              Title = item.Element("title").Value,
                              Author = item.Element("author").Value,
                              SmallThumbnail = item.Element("smallThumbnail").Value
                          }
-                                 ).ToList();
+                     ).ToList();
             }
             catch (Exception ex)
             {
+                Windows.UI.Popups.MessageDialog dlgError = new Windows.UI.Popups.MessageDialog("Error: " + ex.Message + ex.HResult, "Data error");
 
             }
-            return googleDataxml;
+
+            System.Diagnostics.Debug.WriteLine("BooksXaml: " + books.ToString());
+            System.Diagnostics.Debug.WriteLine("Number of elements on booksList: " + books.Count());
+
         }
+
         public APIconnection(HttpClient httpClient)
         {
             this.HttpClient = httpClient;
+        }
+        public List<Book> GetBooks()
+        {
+            return books;
         }
     }
 }
