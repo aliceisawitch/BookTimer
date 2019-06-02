@@ -40,12 +40,14 @@ namespace BookTimer.Views
             ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
-            
-            con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+            try
+            {
+                con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
 
-            con.CreateTable<Book>();
+                con.CreateTable<Book>();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 System.Diagnostics.Debug.WriteLine("Database error: " + ex.Message);
             };
         }
