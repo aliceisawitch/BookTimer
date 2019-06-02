@@ -9,9 +9,14 @@ namespace BookTimer.GoogleBooksApiCnct
 {
     class APIconnection
     {
-        async void LoadGoogleData(HttpClient httpClient)
+        HttpClient HttpClient;
+        async void LoadGoogleData()
         {
 
+        }
+        public APIconnection(HttpClient httpClient)
+        {
+            this.HttpClient = httpClient;
         }
     }
 }
