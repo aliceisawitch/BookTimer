@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\add.png" />
+    <Content Include="Assets\delete.png" />
     <Content Include="Assets\library.png" />
     <Content Include="Assets\LibraryBackground.jpg" />
     <Content Include="Assets\search.png">
