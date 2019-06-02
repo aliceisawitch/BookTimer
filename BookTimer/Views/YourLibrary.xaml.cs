@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using BookTimer.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,12 +23,22 @@ namespace BookTimer.Views
     /// </summary>
     public sealed partial class YourLibraryPage : Page
     {
+        string path;
+        SQLite.Net.SQLiteConnection con;
         public YourLibraryPage()
         {
+
              
             this.InitializeComponent();
-           
-           
+
+            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
+
+            con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+
+            con.CreateTable<Book>();
+            var query = con.Table<Book>();
+            string result = String.Empty;
+         ListOFBooks.ItemsSource = query;
         }
 
         private void ButtonAddBookPage_Click(object sender, RoutedEventArgs e)
