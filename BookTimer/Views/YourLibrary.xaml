@@ -30,7 +30,47 @@
             <Image Opacity="0.65" Source="/Assets/library.png"/>
 
         </StackPanel>
-        <Button Width="100" Height="100" Grid.Row="3" Click="Button_Click"/>
+        
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <ListView x:Name="ListOFBooks">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                    <Image Width="100" Height="100" Source="/Assets/LibraryBackground.jpg"/>
+                    <StackPanel Margin="10">
+                        
+                            <TextBlock />
+                            <TextBlock />
+                           
+                           
+
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Button_Click">
+                                <Button.Background>
+                                    <SolidColorBrush Opacity="0"/>
+
+                                </Button.Background>
+                                <Image Source="/Assets/timer.png" Stretch="Fill"/>
+                            </Button>
+
+                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Button_Click">
+                                <Button.Background>
+                                    <SolidColorBrush Opacity="0"/>
+
+                                </Button.Background>
+                                <Image Source="/Assets/delete.png" Stretch="Fill"/>
+                            </Button>
+                            
+                        
+
+                        </StackPanel>
+                    </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
         <Button Grid.Column="2" HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click">
             <Button.Background>
                 <SolidColorBrush Opacity="0"/>

@@ -24,7 +24,10 @@ namespace BookTimer.Views
     {
         public YourLibraryPage()
         {
+             
             this.InitializeComponent();
+           
+           
         }
 
         private void ButtonAddBookPage_Click(object sender, RoutedEventArgs e)
