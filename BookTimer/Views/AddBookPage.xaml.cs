@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using BookTimer.Views;
 using BookTimer.GoogleBooksApiCnct;
 using System.Xml.Linq;
+using BookTimer.Models;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -47,8 +48,11 @@ namespace BookTimer.Views
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
             apiConnection.LoadGoogleData();
-            XDocument xdoc = apiConnection.parseGoogleData();
+            List<Book> books = apiConnection.GetBooks();
             
+            Windows.UI.Popups.MessageDialog dlgBooks = new Windows.UI.Popups.MessageDialog("Books: " + books.ToString());
+
+
         }
     }
 }

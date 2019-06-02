@@ -124,6 +124,7 @@
     <Compile Include="Views\AddBookPage.xaml.cs">
       <DependentUpon>AddBookPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\book.cs" />
     <Compile Include="Views\BookStopwatch.xaml.cs">
       <DependentUpon>BookStopwatch.xaml</DependentUpon>
     </Compile>
