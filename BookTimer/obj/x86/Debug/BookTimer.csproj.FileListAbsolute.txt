@@ -220,3 +220,14 @@ C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.g
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.g.cs
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.xaml
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\AddBookPage.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Assets\search.png
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\BookStopwatch.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\YourLibrary.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch.g.i.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch.g.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.g.i.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.g.cs
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch.xaml
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.xaml
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.xbf

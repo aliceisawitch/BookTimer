@@ -373,8 +373,26 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\add.png">
+      <PackagePath>Assets\add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\library.png">
+      <PackagePath>Assets\library.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\search.png">
+      <PackagePath>Assets\search.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\start2.png">
+      <PackagePath>Assets\start2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\start3.png">
+      <PackagePath>Assets\start3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\stop2.png">
+      <PackagePath>Assets\stop2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\timer.png">
+      <PackagePath>Assets\timer.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -403,6 +421,12 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Assets\LibraryBackground.jpg">
+      <PackagePath>Assets\LibraryBackground.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\BookTimer.xr.xml">
       <PackagePath>BookTimer.xr.xml</PackagePath>
     </AppxPackagedFile>
@@ -411,6 +435,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\AddBookPage.xbf">
       <PackagePath>Views\AddBookPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\BookStopwatch.xbf">
+      <PackagePath>Views\BookStopwatch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\YourLibrary.xbf">
+      <PackagePath>Views\YourLibrary.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
