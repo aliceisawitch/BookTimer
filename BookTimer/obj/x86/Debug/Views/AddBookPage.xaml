@@ -40,7 +40,7 @@
             <TextBox  Margin="5" PlaceholderText="Title" Padding="10" Width="160" />
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3">
-            <Button x:ConnectionId='3' x:Name="searchButton" HorizontalAlignment="Center" Height="70" Width="70">
+            <Button x:ConnectionId='3' x:Name="searchButton" HorizontalAlignment="Center" Height="70" Width="70"                           >
                 <Button.Background>
                     
                     <SolidColorBrush Opacity="0"/>

@@ -231,3 +231,14 @@ C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.xaml
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\BookStopwatch.xbf
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\Views\YourLibrary.xbf
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\System.Console.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.Console.SR.resw
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.ComponentModel.Primitives.SR.resw
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.Runtime.InteropServices.RuntimeInformation.SR.resw
+C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
