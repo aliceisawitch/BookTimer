@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="kind" type="xs:string" />
+        <xs:element name="totalItems" type="xs:unsignedByte" />
+        <xs:element maxOccurs="unbounded" name="items">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kind" type="xs:string" />
+              <xs:element name="id" type="xs:string" />
+              <xs:element name="etag" type="xs:string" />
+              <xs:element name="selfLink" type="xs:string" />
+              <xs:element name="volumeInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="title" type="xs:string" />
+                    <xs:element minOccurs="0" name="subtitle" type="xs:string" />
+                    <xs:element maxOccurs="unbounded" name="authors" type="xs:string" />
+                    <xs:element minOccurs="0" name="publisher" type="xs:string" />
+                    <xs:element name="publishedDate" type="xs:string" />
+                    <xs:element minOccurs="0" name="description" type="xs:string" />
+                    <xs:element maxOccurs="unbounded" name="industryIdentifiers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="type" type="xs:string" />
+                          <xs:element name="identifier" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="readingModes">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="text" type="xs:boolean" />
+                          <xs:element name="image" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="pageCount" type="xs:unsignedShort" />
+                    <xs:element minOccurs="0" name="printType" type="xs:string" />
+                    <xs:element minOccurs="0" name="categories" type="xs:string" />
+                    <xs:element minOccurs="0" name="averageRating" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="ratingsCount" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="maturityRating" type="xs:string" />
+                    <xs:element minOccurs="0" name="allowAnonLogging" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="contentVersion" type="xs:string" />
+                    <xs:element minOccurs="0" name="panelizationSummary">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="containsEpubBubbles" type="xs:boolean" />
+                          <xs:element name="containsImageBubbles" type="xs:boolean" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="imageLinks">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="smallThumbnail" type="xs:string" />
+                          <xs:element name="thumbnail" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="language" type="xs:string" />
+                    <xs:element name="previewLink" type="xs:string" />
+                    <xs:element name="infoLink" type="xs:string" />
+                    <xs:element name="canonicalVolumeLink" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="saleInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="country" type="xs:string" />
+                    <xs:element name="saleability" type="xs:string" />
+                    <xs:element name="isEbook" type="xs:boolean" />
+                    <xs:element minOccurs="0" name="listPrice">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:decimal" />
+                          <xs:element name="currencyCode" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="retailPrice">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="amount" type="xs:decimal" />
+                          <xs:element name="currencyCode" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="buyLink" type="xs:string" />
+                    <xs:element minOccurs="0" name="offers">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="finskyOfferType" type="xs:unsignedByte" />
+                          <xs:element name="listPrice">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="amountInMicros" type="xs:unsignedInt" />
+                                <xs:element name="currencyCode" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="retailPrice">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="amountInMicros" type="xs:unsignedInt" />
+                                <xs:element name="currencyCode" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="accessInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="country" type="xs:string" />
+                    <xs:element name="viewability" type="xs:string" />
+                    <xs:element name="embeddable" type="xs:boolean" />
+                    <xs:element name="publicDomain" type="xs:boolean" />
+                    <xs:element name="textToSpeechPermission" type="xs:string" />
+                    <xs:element name="epub">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="isAvailable" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="acsTokenLink" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="pdf">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="isAvailable" type="xs:boolean" />
+                          <xs:element minOccurs="0" name="acsTokenLink" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="webReaderLink" type="xs:string" />
+                    <xs:element name="accessViewStatus" type="xs:string" />
+                    <xs:element name="quoteSharingAllowed" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="searchInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="textSnippet" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

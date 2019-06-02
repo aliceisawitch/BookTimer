@@ -45,7 +45,9 @@ namespace BookTimer.Views
 
             con.CreateTable<Book>();
             }
-            catch (Exception ex) { };
+            catch (Exception ex) {
+                System.Diagnostics.Debug.WriteLine("Database error: " + ex.Message);
+            };
         }
 
         private void YourLibraryButton_Click(object sender, RoutedEventArgs e)
@@ -64,7 +66,7 @@ namespace BookTimer.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
+            //var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
             Debug.WriteLine(path);
         }
 
