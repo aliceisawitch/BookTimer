@@ -42,7 +42,11 @@ namespace BookTimer.Views
 
         }
         private int seconds = 0,minutes=0,hours=0;
-        
+
+        private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
+        {
+           this.Frame.Navigate(typeof(YourLibraryPage));
+        }
 
         private void timeTicker(object sender, object e)
         {
@@ -83,7 +87,7 @@ namespace BookTimer.Views
             }
             else
             {
-                time +=+ seconds; ;
+                time += seconds; ;
             }
             tbTimer.Text = time;
         }
@@ -91,6 +95,7 @@ namespace BookTimer.Views
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
+            seconds = 0;
         }
     }
 }
