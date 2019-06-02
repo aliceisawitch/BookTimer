@@ -32,13 +32,15 @@
         </StackPanel>
         
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-            <ListView>
-                <ListViewItem>
+            <ListView x:Name="ListOFBooks">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
                     <StackPanel Margin="10" Orientation="Horizontal">
                     <Image Width="100" Height="100" Source="/Assets/LibraryBackground.jpg"/>
                     <StackPanel Margin="10">
-                            <TextBlock x:Name="tbLibAuthor" Text="Autor"/>
-                            <TextBlock x:Name="tbLibTitle" Text="Tytuł"/>
+                        
+                            <TextBlock />
+                            <TextBlock />
                            
                            
 
@@ -65,7 +67,8 @@
 
                         </StackPanel>
                     </StackPanel>
-                </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
         <Button Grid.Column="2" HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click">
