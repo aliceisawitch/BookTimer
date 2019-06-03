@@ -23,22 +23,17 @@ namespace BookTimer.Views
     /// </summary>
     public sealed partial class YourLibraryPage : Page
     {
-        string path;
-        SQLite.Net.SQLiteConnection con;
+       
+        
         public YourLibraryPage()
         {
 
              
             this.InitializeComponent();
-
-            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
-
-            con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
-
-            con.CreateTable<Book>();
-            var query = con.Table<Book>();
-            string result = String.Empty;
-         ListOFBooks.ItemsSource = query;
+            Database db = new Database();
+            var query = db.createTable().Table<Book>();
+            
+            ListOFBooks.ItemsSource = query;
         }
 
         private void ButtonAddBookPage_Click(object sender, RoutedEventArgs e)

@@ -58,7 +58,7 @@ namespace BookTimer.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-           // var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
+            //var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
             //Debug.WriteLine(path);
         }
 
