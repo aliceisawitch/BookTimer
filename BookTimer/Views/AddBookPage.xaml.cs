@@ -29,7 +29,7 @@ namespace BookTimer.Views
     /// 
     public sealed partial class AddBookPage : Page
     {
-       
+        Database db = new Database();
         static Windows.Web.Http.HttpClient httpClient;
         public AddBookPage()
         {
@@ -53,30 +53,12 @@ namespace BookTimer.Views
             APIconnection apiConnection = new APIconnection(httpClient);
             apiConnection.LoadGoogleData();
             List<Book> books = apiConnection.GetBooks();
-            
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            //var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
-            //Debug.WriteLine(path);
-        }
-
-        private void Show_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-
+            addListView.ItemsSource = books;
+            //var add = db.createTable().Insert(new Book() { Title = tbTitle.Text, Author = tbAuthor.Text, Time = "" });
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-           
-           
-
-        }
+        
 
             
         }

@@ -30,9 +30,10 @@ namespace BookTimer.Views
 
              
             this.InitializeComponent();
-            
+
+            db.createTable().CreateTable<Book>();
             var query = db.createTable().Table<Book>();
-            
+
             ListOFBooks.ItemsSource = query;
         }
 
@@ -48,7 +49,18 @@ namespace BookTimer.Views
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
+
             
+            // db.createTable().Execute("DELETE FROM Book WHERE Id={0}");
+            
+
+           
+           
+        }
+
+        private void Watch_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BookStopwatch));
         }
     }
 }
