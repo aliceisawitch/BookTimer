@@ -55,8 +55,8 @@
                                 <Image Source="/Assets/timer.png" Stretch="Fill"/>
                             </Button>
 
-                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Button_Click">
-                                <Button.Background>
+                                <Button x:Name="delete" Width="50" Height="50" Margin="10" Grid.Row="3" Click="Delete_Click" >
+                                    <Button.Background>
                                     <SolidColorBrush Opacity="0"/>
 
                                 </Button.Background>
