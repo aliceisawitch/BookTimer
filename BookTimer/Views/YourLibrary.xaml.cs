@@ -64,7 +64,7 @@ namespace BookTimer.Views
 
         private void Watch_Click(object sender, RoutedEventArgs e)
         {
-            chosenBook = new Book("PassBook", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api");
+            chosenBook = (Book)ListOFBooks.SelectedItem;
             this.Frame.Navigate(typeof(BookStopwatch));
         }
     }

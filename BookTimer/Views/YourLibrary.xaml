@@ -32,8 +32,8 @@
         </StackPanel>
         
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-            <ListView Height="475" x:Name="ListOFBooks">
-                <ListView.ItemTemplate>
+            <ListBox Height="475" x:Name="ListOFBooks">
+                <ListBox.ItemTemplate>
                     <DataTemplate>
                     <StackPanel Margin="10" Orientation="Horizontal">
                     <Image Width="100" Height="100" Source="{Binding SmallThumbnail}"/>
@@ -49,8 +49,8 @@
                         
                     </StackPanel>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </StackPanel>
         
             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
