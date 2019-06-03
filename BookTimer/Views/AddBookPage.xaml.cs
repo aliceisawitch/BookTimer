@@ -41,7 +41,7 @@ namespace BookTimer.Views
         {
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
-            apiConnection.LoadGoogleData();
+            apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
             List<Book> books = apiConnection.GetBooks();
             
         }

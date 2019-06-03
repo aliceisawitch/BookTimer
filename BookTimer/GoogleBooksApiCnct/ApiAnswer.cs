@@ -29,7 +29,7 @@ namespace BookTimer.GoogleBooksApiCnct
 
         private string kindField;
 
-        private byte totalItemsField;
+        private int totalItemsField;
 
         private rootItems[] itemsField;
 
@@ -47,7 +47,7 @@ namespace BookTimer.GoogleBooksApiCnct
         }
 
         /// <remarks/>
-        public byte totalItems
+        public int totalItems
         {
             get
             {
@@ -235,13 +235,13 @@ namespace BookTimer.GoogleBooksApiCnct
 
         private string printTypeField;
 
-        private string categoriesField;
+        private string[] categoriesField;
 
-        private byte averageRatingField;
+        private string averageRatingField;
 
         private bool averageRatingFieldSpecified;
 
-        private byte ratingsCountField;
+        private int ratingsCountField;
 
         private bool ratingsCountFieldSpecified;
 
@@ -413,7 +413,7 @@ namespace BookTimer.GoogleBooksApiCnct
         }
 
         /// <remarks/>
-        public string categories
+        public string[] categories
         {
             get
             {
@@ -426,7 +426,7 @@ namespace BookTimer.GoogleBooksApiCnct
         }
 
         /// <remarks/>
-        public byte averageRating
+        public string averageRating
         {
             get
             {
@@ -453,7 +453,7 @@ namespace BookTimer.GoogleBooksApiCnct
         }
 
         /// <remarks/>
-        public byte ratingsCount
+        public int ratingsCount
         {
             get
             {
@@ -975,14 +975,14 @@ namespace BookTimer.GoogleBooksApiCnct
     public partial class rootItemsSaleInfoOffers
     {
 
-        private byte finskyOfferTypeField;
+        private int finskyOfferTypeField;
 
         private rootItemsSaleInfoOffersListPrice listPriceField;
 
         private rootItemsSaleInfoOffersRetailPrice retailPriceField;
 
         /// <remarks/>
-        public byte finskyOfferType
+        public int finskyOfferType
         {
             get
             {
