@@ -22,7 +22,7 @@ namespace BookTimer.Models
         {
             this.Author = Author;
             this.Title = Title;
-            this.SmallThumbnail = SmallThumbnail;
+            this.SmallThumbnail = smallThumbnail;
         }
     }
 }

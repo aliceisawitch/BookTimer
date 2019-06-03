@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-06-03T18:05:23.114</Modified>
+      <Modified>2019-06-03T18:33:53.029</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\BookTimer.exe">
       <PackagePath>entrypoint\BookTimer.exe</PackagePath>
-      <Modified>2019-06-03T18:04:14.827</Modified>
+      <Modified>2019-06-03T18:33:52.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -614,19 +614,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-06-03T18:05:22.661</Modified>
+      <Modified>2019-06-03T18:33:52.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\AddBookPage.xbf">
       <PackagePath>Views\AddBookPage.xbf</PackagePath>
-      <Modified>2019-06-03T18:05:22.661</Modified>
+      <Modified>2019-06-03T18:33:52.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\BookStopwatch.xbf">
       <PackagePath>Views\BookStopwatch.xbf</PackagePath>
-      <Modified>2019-06-03T18:05:22.661</Modified>
+      <Modified>2019-06-03T18:33:52.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Views\YourLibrary.xbf">
       <PackagePath>Views\YourLibrary.xbf</PackagePath>
-      <Modified>2019-06-03T18:05:22.661</Modified>
+      <Modified>2019-06-03T18:33:52.435</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -638,7 +638,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\Core\BookTimer.exe">
       <PackagePath>BookTimer.exe</PackagePath>
-      <Modified>2019-06-03T18:05:23.114</Modified>
+      <Modified>2019-06-03T18:33:53.013</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -48,7 +48,7 @@ namespace BookTimer.GoogleBooksApiCnct
                 
                 foreach (rootItems rootItem in myXmlRoot.items)
                 {
-                    books.Add(new Book(rootItem.volumeInfo.title, rootItem.volumeInfo.authors[0], rootItem.volumeInfo.imageLinks.smallThumbnail));
+                    books.Add(new Book(rootItem.volumeInfo.title, rootItem.volumeInfo.authors[0], rootItem.volumeInfo.imageLinks.thumbnail));
 
                 }
             }
@@ -57,7 +57,7 @@ namespace BookTimer.GoogleBooksApiCnct
                 System.Diagnostics.Debug.WriteLine("Error: " + ex.Message + ex.HResult + "DataError");
 
             }
-
+            
             foreach (Book book in books)
             {
                 System.Diagnostics.Debug.WriteLine("Book: " + book.Title + " " + book.Author + " " + book.SmallThumbnail);
