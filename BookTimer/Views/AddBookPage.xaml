@@ -8,6 +8,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource AppBarBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="bookTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Title}"/>
+                <TextBlock Text="{Binding Author}" TextAlignment="Right"/>
+                <Image Source="{Binding SmallThumbnail}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -50,38 +59,8 @@
                 <Image Source="/Assets/search.png"/>
             </Button>
             <StackPanel>
-                <ListView x:Name="addListView">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="10" Orientation="Horizontal">
-                                <Image Width="100" Height="100" Source="{Binding SmallThumbnail}"/>
-                                <StackPanel Margin="10">
-
-                                    <TextBlock Text="{Binding Author}" />
-                                    <TextBlock Text="{Binding Title}" />
-
-
-
-
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Add_Click">
-                                        <Button.Background>
-                                            <SolidColorBrush Opacity="0"/>
-
-                                        </Button.Background>
-                                        <Image Source="/Assets/add.png" Stretch="Fill"/>
-                                    </Button>
-
-                                    
-
-
-
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <ListBox Margin="5" Name="LbxBooks" Width="auto" Height="180" ItemTemplate="{StaticResource bookTemplate}">
+                </ListBox>
             </StackPanel>
             
             

@@ -43,9 +43,9 @@ namespace BookTimer.Views
             APIconnection apiConnection = new APIconnection(httpClient);
             apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
             List<Book> books = apiConnection.GetBooks();
-            addListView.ItemsSource = books;
             //var add = db.createTable().Insert(new Book() { Title = tbTitle.Text, Author = tbAuthor.Text, Time = "" });
-
+            books.Add(new Book("Test Book", "Test Title", "http://books.google.com/books/content?id=qlRhAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
+            LbxBooks.ItemsSource = books;
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
