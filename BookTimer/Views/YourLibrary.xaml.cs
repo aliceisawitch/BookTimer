@@ -24,17 +24,19 @@ namespace BookTimer.Views
     public sealed partial class YourLibraryPage : Page
     {
         Database db = new Database();
+        List<Book> books = new List<Book>();
 
         public YourLibraryPage()
         {
 
              
             this.InitializeComponent();
+            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
+            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
+            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
 
-            db.createTable().CreateTable<Book>();
-            var query = db.createTable().Table<Book>();
+            ListOFBooks.ItemsSource = books;
 
-            ListOFBooks.ItemsSource = query;
         }
 
         private void ButtonAddBookPage_Click(object sender, RoutedEventArgs e)
