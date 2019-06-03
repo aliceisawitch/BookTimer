@@ -17,7 +17,10 @@ namespace BookTimer.Models
         public string SmallThumbnail { get; set; }
 
         public TimeSpan Time { get; set; }
+        public Book()
+        {
 
+        }
         public Book(string Title, string Author, string smallThumbnail)
         {
             this.Author = Author;

@@ -32,53 +32,56 @@
         </StackPanel>
         
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-            <ListView x:Name="ListOFBooks">
+            <ListView Height="475" x:Name="ListOFBooks">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                     <StackPanel Margin="10" Orientation="Horizontal">
                     <Image Width="100" Height="100" Source="{Binding SmallThumbnail}"/>
                     <StackPanel Margin="10">
                         
-                            <TextBlock x:Name="tbAuthorLib" Width="150" Text="{Binding Author}"  />
-                            <TextBlock x:Name="tbTitleLib" Width="150" Text="{Binding Title}" />
+                            <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="15"  x:Name="tbAuthorLib" Width="150" Text="{Binding Author}"  />
+                                <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="20" FontWeight="Bold" x:Name="tbTitleLib" Width="150" Text="{Binding Title}" />
                            
                            
 
 
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" x:Name="watch" Click="Watch_Click">
-                                <Button.Background>
-                                    <SolidColorBrush Opacity="0"/>
-
-                                </Button.Background>
-                                <Image Source="/Assets/timer.png" Stretch="Fill"/>
-                            </Button>
-
-                                <Button x:Name="delete" Width="50" Height="50" Margin="10" Grid.Row="3" Click="Delete_Click" >
-                                    <Button.Background>
-                                    <SolidColorBrush Opacity="0"/>
-
-                                </Button.Background>
-                                <Image Source="/Assets/delete.png" Stretch="Fill"/>
-                            </Button>
-                            
                         
-
-                        </StackPanel>
                     </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-        <Button Grid.Column="2" HorizontalAlignment="Right" Name="ButtonAddBookPage" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="ButtonAddBookPage_Click">
-            <Button.Background>
-                <SolidColorBrush Opacity="0"/>
-               
-            </Button.Background>
-            <StackPanel>
+        
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Button Width="70" Height="70" Margin="10" Grid.Row="3" x:Name="watch" Click="Watch_Click">
+                    <Button.Background>
+                        <SolidColorBrush Opacity="0"/>
+
+                    </Button.Background>
+                    <Image Opacity="0.65" Source="/Assets/timer.png" Stretch="Fill"/>
+                </Button>
+
+                <Button x:Name="delete" Width="70" Height="70" Margin="10" Grid.Row="3" Click="Delete_Click" >
+                    <Button.Background>
+                        <SolidColorBrush Opacity="0"/>
+
+                    </Button.Background>
+                    <Image Opacity="0.65" Source="/Assets/delete.png" Stretch="Fill"/>
+                </Button>
+
+
+            <Button  Name="ButtonAddBookPage"  Height="70" Margin="10" Width="70"  Click="ButtonAddBookPage_Click">
+                <Button.Background>
+                    <SolidColorBrush Opacity="0"/>
+
+                </Button.Background>
+
                 <Image Opacity="0.65" Source="/Assets/add.png"/>
-            </StackPanel>
-        </Button>
+
+            </Button>
+        </StackPanel>
+        
+        
     </Grid>
 </Page>
