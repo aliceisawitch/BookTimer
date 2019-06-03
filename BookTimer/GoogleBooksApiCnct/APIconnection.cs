@@ -20,7 +20,6 @@ namespace BookTimer.GoogleBooksApiCnct
 
         HttpClient HttpClient;
         List<Book> books = new List<Book>();
-        string MockUpGet = "https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyDK0-zIoneoTz7tqQx_YsDAkaGVtFVrCNE";
         static readonly string maxNumberOfResults = "&maxResults=3";
 
         public async void LoadGoogleData(string author, string title)

@@ -4,6 +4,7 @@
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Author" />
     <RootPropertyPathName Name="SmallThumbnail" />
+    <RootPropertyPathName Name="Time" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

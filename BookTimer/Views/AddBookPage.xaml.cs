@@ -47,10 +47,15 @@ namespace BookTimer.Views
             //var add = db.createTable().Insert(new Book() { Title = tbTitle.Text, Author = tbAuthor.Text, Time = "" });
 
         }
-
-        
-
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
             
+
         }
+
+
+
+
+    }
     }
 
