@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using Windows.Web.Http;
@@ -20,7 +21,7 @@ namespace BookTimer.GoogleBooksApiCnct
         List<Book> books = new List<Book>();
         static readonly string maxNumberOfResults = "&maxResults=3";
 
-        public async void LoadGoogleData(string author, string title)
+        public async Task LoadGoogleData(string author, string title)
         {
             string query = buildApiQuery(author, title);
             System.Diagnostics.Debug.WriteLine(query);
