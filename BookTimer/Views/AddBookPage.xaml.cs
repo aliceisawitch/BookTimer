@@ -19,6 +19,7 @@ namespace BookTimer.Views
     /// 
     public sealed partial class AddBookPage : Page
     {
+        List<Book> books;
         Database db = new Database();
         static Windows.Web.Http.HttpClient httpClient;
         public AddBookPage()
@@ -41,11 +42,16 @@ namespace BookTimer.Views
         {
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
-            apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
-            List<Book> books = apiConnection.GetBooks();
-            //var add = db.createTable().Insert(new Book() { Title = tbTitle.Text, Author = tbAuthor.Text, Time = "" });
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=qlRhAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            LbxBooks.ItemsSource = books;
+            Task waitForGoogleData = apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
+            await waitForGoogleData;
+            books = apiConnection.GetBooks();
+            //<log>
+            foreach (Book book in books)
+            {
+                System.Diagnostics.Debug.WriteLine("BookAsynch: " + book.Title + " " + book.Author + " " + book.SmallThumbnail);
+            }
+            //<log/>
+            LbxBooks.ItemsSource = apiConnection.GetBooks(); 
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
