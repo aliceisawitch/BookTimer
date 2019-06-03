@@ -8,13 +8,21 @@ using SQLite.Net.Attributes;
 namespace BookTimer.Models
 {
     class Book
-    {   [PrimaryKey,AutoIncrement]
+    {
+        [PrimaryKey, AutoIncrement]
 
-         public int Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public string SmallThumbnail { get; set; }
-        
+
         public string Time { get; set; }
+
+        public Book(string Title, string Author, string smallThumbnail)
+        {
+            this.Author = Author;
+            this.Title = Title;
+            this.SmallThumbnail = SmallThumbnail;
+        }
     }
 }
