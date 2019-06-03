@@ -56,7 +56,7 @@ namespace BookTimer.Views
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            
+            System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
 
         }
 

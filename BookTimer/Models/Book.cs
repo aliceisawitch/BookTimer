@@ -16,13 +16,19 @@ namespace BookTimer.Models
         public string Author { get; set; }
         public string SmallThumbnail { get; set; }
 
-        public string Time { get; set; }
+        public TimeSpan Time { get; set; }
 
         public Book(string Title, string Author, string smallThumbnail)
         {
             this.Author = Author;
             this.Title = Title;
             this.SmallThumbnail = smallThumbnail;
+            this.Time = TimeSpan.Zero;
+        }
+
+        public override string ToString()
+        {
+            return "BookToString: " + this.Id + " " + this.Author + " " + this.Title + " " + this.Time.ToString() + this.SmallThumbnail;
         }
     }
 }
