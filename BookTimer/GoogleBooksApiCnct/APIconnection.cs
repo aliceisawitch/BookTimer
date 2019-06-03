@@ -38,10 +38,12 @@ namespace BookTimer.GoogleBooksApiCnct
                 App.Current.Exit();
             }
             string googleData = dataGoogle;
-            System.Diagnostics.Debug.WriteLine("Books: " + dataGoogle);
+            //System.Diagnostics.Debug.WriteLine("Books: " + dataGoogle);
 
-            root myXmlRoot = JsonConvert.DeserializeObject<root>(googleData);
-            //root myXmlRoot = xmlSerializer.Deserialize(new StringReader(googleDataxml.ToString())) as root;
+            //root myXmlRoot = JsonConvert.DeserializeObject<root>(googleData);
+            XDocument googleDataxml = (XDocument)JsonConvert.DeserializeXNode(dataGoogle, "root");
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(root));
+            root myXmlRoot = xmlSerializer.Deserialize(new StringReader(googleDataxml.ToString())) as root;
             try
             {
                 
