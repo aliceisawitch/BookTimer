@@ -45,15 +45,19 @@ namespace BookTimer.Views
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
             Task waitForGoogleData = apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
-            await waitForGoogleData;
-            books = apiConnection.GetBooks();
-            //<log>
-            foreach (Book book in books)
+            try
             {
-                System.Diagnostics.Debug.WriteLine("BookAsynch: " + book.Title + " " + book.Author + " " + book.SmallThumbnail);
+                await waitForGoogleData;
+                books = apiConnection.GetBooks();
+                //<log>
+                foreach (Book book in books)
+                {
+                    System.Diagnostics.Debug.WriteLine("BookAsynch: " + book.Title + " " + book.Author + " " + book.SmallThumbnail);
+                }
+                //<log/>
+                LbxBooks.ItemsSource = apiConnection.GetBooks();
             }
-            //<log/>
-            LbxBooks.ItemsSource = apiConnection.GetBooks(); 
+            catch (System.NullReferenceException ex) { };
         }
         private async void Add_Click(object sender, RoutedEventArgs e)
         {
