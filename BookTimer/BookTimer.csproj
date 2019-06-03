@@ -119,6 +119,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="GoogleBooksApiCnct\ApiAnswer.cs" />
     <Compile Include="GoogleBooksApiCnct\APIconnection.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
