@@ -23,16 +23,17 @@ namespace BookTimer.Views
     /// </summary>
     public sealed partial class YourLibraryPage : Page
     {
-       
-        
+        Database db = new Database();
+
         public YourLibraryPage()
         {
 
              
             this.InitializeComponent();
-            Database db = new Database();
+
+            db.createTable().CreateTable<Book>();
             var query = db.createTable().Table<Book>();
-            
+
             ListOFBooks.ItemsSource = query;
         }
 
@@ -42,6 +43,22 @@ namespace BookTimer.Views
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BookStopwatch));
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+            
+            // db.createTable().Execute("DELETE FROM Book WHERE Id={0}");
+            
+
+           
+           
+        }
+
+        private void Watch_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BookStopwatch));
         }

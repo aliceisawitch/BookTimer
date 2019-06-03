@@ -19,7 +19,7 @@ namespace BookTimer
 
             con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
 
-            con.CreateTable<Book>();
+            
             
             return con;
             

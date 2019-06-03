@@ -39,15 +39,15 @@
                     <Image Width="100" Height="100" Source="{Binding SmallThumbnail}"/>
                     <StackPanel Margin="10">
                         
-                            <TextBlock Width="150" Text="{Binding Author}"  />
-                            <TextBlock Width="150" Text="{Binding Title}" />
+                            <TextBlock x:Name="tbAuthorLib" Width="150" Text="{Binding Author}"  />
+                            <TextBlock x:Name="tbTitleLib" Width="150" Text="{Binding Title}" />
                            
                            
 
 
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Button_Click">
+                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" x:Name="watch" Click="Watch_Click">
                                 <Button.Background>
                                     <SolidColorBrush Opacity="0"/>
 
@@ -55,8 +55,8 @@
                                 <Image Source="/Assets/timer.png" Stretch="Fill"/>
                             </Button>
 
-                            <Button Width="50" Height="50" Margin="10" Grid.Row="3" Click="Button_Click">
-                                <Button.Background>
+                                <Button x:Name="delete" Width="50" Height="50" Margin="10" Grid.Row="3" Click="Delete_Click" >
+                                    <Button.Background>
                                     <SolidColorBrush Opacity="0"/>
 
                                 </Button.Background>
