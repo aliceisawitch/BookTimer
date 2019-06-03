@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
@@ -37,15 +38,14 @@ namespace BookTimer.Views
             this.Frame.Navigate(typeof(YourLibraryPage));
         }
 
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private async void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
-            apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
+            Task waitForGoogleData = apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
+            await waitForGoogleData;
             List<Book> books = apiConnection.GetBooks();
-            //var add = db.createTable().Insert(new Book() { Title = tbTitle.Text, Author = tbAuthor.Text, Time = "" });
-            books.Add(new Book("Test Book", "Test Title", "http://books.google.com/books/content?id=qlRhAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            LbxBooks.ItemsSource = books;
+            LbxBooks.ItemsSource = apiConnection.GetBooks(); 
         }
         private void Add_Click(object sender, RoutedEventArgs e)
         {
