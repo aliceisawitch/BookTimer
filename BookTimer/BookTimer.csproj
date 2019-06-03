@@ -118,11 +118,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="DataBase.cs" />
-=======
-    <Compile Include="GoogleBooksApiCnct\ApiAnswer.cs" />
->>>>>>> f73264b0ffa49dad226370639744baa27edf3872
     <Compile Include="GoogleBooksApiCnct\APIconnection.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

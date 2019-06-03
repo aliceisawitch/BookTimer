@@ -7,8 +7,6 @@ using Windows.Web.Http;
 using System.Xml.Linq;
 using BookTimer.Models;
 using Newtonsoft.Json;
-using System.Xml.Serialization;
-using System.IO;
 
 namespace BookTimer.GoogleBooksApiCnct
 {
@@ -34,16 +32,25 @@ namespace BookTimer.GoogleBooksApiCnct
             System.Diagnostics.Debug.WriteLine("Books: " + dataGoogle);
             XDocument googleDataxml = (XDocument)JsonConvert.DeserializeXNode(dataGoogle, "root");
             System.Diagnostics.Debug.WriteLine("BooksXaml: " + googleDataxml.ToString());
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(root));
-            root myXmlRoot = xmlSerializer.Deserialize(new StringReader(googleDataxml.ToString())) as root;
-            foreach (rootItems rootItem in myXmlRoot.items)
+
+
+            try
             {
-                books.Add(new Book(rootItem.volumeInfo.title, rootItem.volumeInfo.authors.ToString(), rootItem.volumeInfo.imageLinks.smallThumbnail));
+                books = (from item in googleDataxml.Descendants("items")
+                         select new Book
+                         {
+                             Title = item.Element("title").Value,
+                             Author = item.Element("author").Value,
+                             SmallThumbnail = item.Element("smallThumbnail").Value
+                         }
+                     ).ToList();
             }
-            foreach (Book book in books)
+            catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Book Title: " + book.Title);
+                Windows.UI.Popups.MessageDialog dlgError = new Windows.UI.Popups.MessageDialog("Error: " + ex.Message + ex.HResult, "Data error");
+
             }
+
             System.Diagnostics.Debug.WriteLine("BooksXaml: " + books.ToString());
             System.Diagnostics.Debug.WriteLine("Number of elements on booksList: " + books.Count());
 
