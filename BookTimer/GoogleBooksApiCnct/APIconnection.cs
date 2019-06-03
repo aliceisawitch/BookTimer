@@ -70,8 +70,14 @@ namespace BookTimer.GoogleBooksApiCnct
         {
             string queryAuthor = author.Trim().Replace(" ", "+");
             string queryBook = title.Trim().Replace(" ", "+");
+
             System.Diagnostics.Debug.WriteLine("Query in progress: " + queryAuthor + "+" +queryBook);
-            return apiQuery + queryAuthor + "+" + queryBook + maxNumberOfResults + apiKey;
+            if (queryAuthor == "")
+            {
+                return apiQuery + queryBook + maxNumberOfResults + apiKey;
+            }
+            else
+                return apiQuery + queryAuthor + "+" + queryBook + maxNumberOfResults + apiKey;
         }
 
         public APIconnection(HttpClient httpClient)
@@ -82,5 +88,6 @@ namespace BookTimer.GoogleBooksApiCnct
         {
             return books;
         }
+
     }
 }
