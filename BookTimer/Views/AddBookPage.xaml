@@ -10,7 +10,7 @@
     Background="{ThemeResource AppBarBackgroundThemeBrush}">
     <Page.Resources>
         <DataTemplate x:Key="bookTemplate">
-            <StackPanel Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="1" Orientation="Horizontal">
                 <Image Source="{Binding SmallThumbnail}"/>
                 <StackPanel>
                     <TextBlock  FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
@@ -33,7 +33,8 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+
         </Grid.RowDefinitions>
         
         
@@ -69,8 +70,8 @@
             
             
         </StackPanel>
-        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right"  VerticalAlignment="Bottom">
-            <Button Width="70" Height="70" x:Name="yourLibraryButton" Click="YourLibraryButton_Click">
+        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" >
+            <Button Width="70" Height="70" x:Name="yourLibraryButton" VerticalAlignment="Bottom" Click="YourLibraryButton_Click">
                 <Button.Background>
                     <SolidColorBrush Opacity="0"/>
                 </Button.Background>
