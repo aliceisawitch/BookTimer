@@ -10,13 +10,13 @@
     Background="{ThemeResource AppBarBackgroundThemeBrush}">
     <Page.Resources>
         <DataTemplate x:Key="bookTemplate">
-            <StackPanel HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="1" Orientation="Horizontal">
-                <Image Source="{Binding SmallThumbnail}"/>
-                <StackPanel>
-                    <TextBlock Width="150" TextWrapping="WrapWholeWords" FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
-                    <TextBlock Width="150" TextWrapping="WrapWholeWords" FontSize="20" Margin="10" TextAlignment="Right" FontWeight="Bold" Text="{Binding Title}"/>
+            <StackPanel BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Orientation="Horizontal">
+                <Image Margin="10" Source="{Binding SmallThumbnail}"/>
+                
+                    <TextBlock Width="130" TextWrapping="WrapWholeWords" FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
+                    <TextBlock Width="130" TextWrapping="WrapWholeWords" FontSize="20" Margin="10" TextAlignment="Right" FontWeight="Bold" Text="{Binding Title}"/>
                    
-                </StackPanel>
+                
                
                
                 
@@ -65,26 +65,25 @@
 
                 <Image Source="/Assets/search.png"/>
             </Button>
-            <StackPanel>
-                <ListBox Margin="5" Name="LbxBooks" Width="auto" Height="180" ItemTemplate="{StaticResource bookTemplate}">
-                </ListBox>
-            </StackPanel>
-            
-            
+ 
         </StackPanel>
-        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" >
-            <Button Width="70" Height="70" x:Name="yourLibraryButton" VerticalAlignment="Bottom" Click="YourLibraryButton_Click">
-                <Button.Background>
-                    <SolidColorBrush Opacity="0"/>
-                </Button.Background>
-                <StackPanel>
-                    <Image Source="/Assets/library.png"/>
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" >
+            <ListView  Margin="5" Name="LbxBooks" Width="auto" Height="330"  ItemTemplate="{StaticResource bookTemplate}">
+            </ListView>
+        </StackPanel>
 
-                </StackPanel>
-            </Button>
-            
-        </StackPanel>
-       
+        <Button Grid.Column="2" HorizontalAlignment="Right" Name="yourLibraryButton" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="YourLibraryButton_Click">
+            <Button.Background>
+                <SolidColorBrush Opacity="0"/>
+
+            </Button.Background>
+
+            <Image Opacity="0.65" Source="/Assets/library.png"/>
+
+        </Button>
+
+
+
 
 
     </Grid>
