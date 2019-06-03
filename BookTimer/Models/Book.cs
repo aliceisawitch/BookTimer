@@ -31,7 +31,7 @@ namespace BookTimer.Models
 
         public override string ToString()
         {
-            return "BookToString: " + this.Id + " " + this.Author + " " + this.Title + " " + this.Time.ToString() + this.SmallThumbnail;
+            return "BookToString: " + this.Id + " " + this.Author + " " + this.Title + " " + this.Time.ToString()+ " " + this.SmallThumbnail;
         }
     }
 }
