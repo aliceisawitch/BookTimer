@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Diagnostics;
+using BookTimer.Models;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,51 +26,55 @@ namespace BookTimer.Views
 
     {
         DispatcherTimer timer = new DispatcherTimer();
+        Book chosenBook;
 
         public BookStopwatch()
         {
-            this.InitializeComponent();
-            
-            
+            chosenBook = YourLibraryPage.chosenBook;
+            System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
+
+           this.InitializeComponent();
+
+
         }
-        
+
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            TimeSpan timeSpan = 
+            TimeSpan timeSpan =
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timeTicker;
             timer.Start();
 
         }
-        private int seconds = 0,minutes=0,hours=0;
+        private int seconds = 0, minutes = 0, hours = 0;
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
-           this.Frame.Navigate(typeof(YourLibraryPage));
+            this.Frame.Navigate(typeof(YourLibraryPage));
         }
 
         private void timeTicker(object sender, object e)
         {
-            string time="";
+            string time = "";
             seconds++;
             if (seconds == 60)
             {
                 minutes++;
                 seconds = 0;
             }
-            if(minutes==60)
+            if (minutes == 60)
             {
                 hours++;
                 minutes = 0;
             }
-           
-            if(hours<10)
+
+            if (hours < 10)
             {
                 time += "0" + hours;
             }
             else
             {
-                time += + hours;
+                time += +hours;
             }
             time += ":";
             if (minutes < 10)
@@ -97,5 +102,7 @@ namespace BookTimer.Views
             timer.Stop();
             seconds = 0;
         }
+
     }
+
 }

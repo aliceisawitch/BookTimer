@@ -25,6 +25,7 @@ namespace BookTimer.Views
     {
         Database db = new Database();
         List<Book> books = new List<Book>();
+        public static Book chosenBook;
 
         public YourLibraryPage()
         {
@@ -62,6 +63,7 @@ namespace BookTimer.Views
 
         private void Watch_Click(object sender, RoutedEventArgs e)
         {
+            chosenBook = new Book("PassBook", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api");
             this.Frame.Navigate(typeof(BookStopwatch));
         }
     }
