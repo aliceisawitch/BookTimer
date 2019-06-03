@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Web.Http;
-using System.Xml.Linq;
-using BookTimer.Models;
+﻿using BookTimer.Models;
 using Newtonsoft.Json;
-using System.Xml.Serialization;
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+using Windows.Web.Http;
 
 namespace BookTimer.GoogleBooksApiCnct
 {
