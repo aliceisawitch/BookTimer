@@ -7,7 +7,7 @@ using SQLite.Net.Attributes;
 
 namespace BookTimer.Models
 {
-    class Book
+    public class Book
     {
         [PrimaryKey, AutoIncrement]
 
