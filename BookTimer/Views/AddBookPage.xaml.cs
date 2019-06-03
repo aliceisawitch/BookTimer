@@ -9,6 +9,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -54,10 +55,22 @@ namespace BookTimer.Views
             //<log/>
             LbxBooks.ItemsSource = apiConnection.GetBooks(); 
         }
-        private void Add_Click(object sender, RoutedEventArgs e)
+        private async void Add_Click(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
+            var messageDialog = new MessageDialog("Would you like to add this book to your library?");
+            messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.SaveToDbInvokedHandler)));
+            messageDialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.SaveToDbInvokedHandler)));
+            await messageDialog.ShowAsync();
+            
+        }
 
+        private void SaveToDbInvokedHandler(IUICommand command)
+        {
+            if (command.Label == "Yes")
+            {
+                System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
+            }
+            
         }
 
 

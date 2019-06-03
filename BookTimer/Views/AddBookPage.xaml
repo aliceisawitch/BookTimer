@@ -15,16 +15,9 @@
                 <StackPanel>
                     <TextBlock  FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
                     <TextBlock FontSize="20" Margin="10" TextAlignment="Right" FontWeight="Bold" Text="{Binding Title}"/>
-                   
+
                 </StackPanel>
-                <Button Margin="10" Click="Add_Click">
-                    <Button.Background>
-                        <SolidColorBrush Opacity="0"/>
-                    </Button.Background>
-                    <Image Source="/Assets/add.png"/>
-                </Button>
-               
-                
+
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -70,7 +63,7 @@
                 <Image Source="/Assets/search.png"/>
             </Button>
             <StackPanel>
-                <ListBox Margin="5" Name="LbxBooks" Width="auto" Height="180" ItemTemplate="{StaticResource bookTemplate}">
+                <ListBox Margin="5" Name="LbxBooks" Width="auto" Height="180" ItemTemplate="{StaticResource bookTemplate}" SelectionChanged="Add_Click">
                 </ListBox>
             </StackPanel>
             
