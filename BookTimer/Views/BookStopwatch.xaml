@@ -34,14 +34,14 @@
             <Image Source="/Assets/timer.png"/>
 
         </StackPanel>
-        <StackPanel Height="150" Padding="10" Grid.Column="0" Grid.Row="2" >
+        <StackPanel Height="200" Padding="10" Grid.Column="0" Grid.Row="2" >
             <Image Width="150" Source="/Assets/LibraryBackground.jpg"/>
         </StackPanel>
-        <StackPanel Height="150" Grid.Row="2" Grid.Column="2">
+        <StackPanel Height="200" Grid.Row="2" Grid.Column="2">
             <TextBlock x:Name="tbAutor" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{Binding Author}"/>
             <TextBlock x:Name="tbTytul" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{Binding Title}"/>
             <TextBlock Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" TextWrapping="WrapWholeWords" Text="Overall time spend on this title:"/>
-            <TextBlock x:Name="tbTimer" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Text="{Binding Time}"/>
+            <TextBlock x:Name="tbTimer" Padding="5" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Text="{Binding Time}"/>
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="0">
