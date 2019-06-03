@@ -38,8 +38,22 @@ namespace BookTimer.Views
             // This part was added to display application on windows same way as on mobile
             ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
             ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+<<<<<<< HEAD
             
            
+=======
+            path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
+            try
+            {
+                con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
+
+                con.CreateTable<Book>();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("Database error: " + ex.Message);
+            };
+>>>>>>> f73264b0ffa49dad226370639744baa27edf3872
         }
 
         private void YourLibraryButton_Click(object sender, RoutedEventArgs e)
@@ -58,8 +72,13 @@ namespace BookTimer.Views
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
            // var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
             //Debug.WriteLine(path);
+=======
+            //var add = con.Insert(new Book() {Title=tbTitle.Text, Author=tbAuthor.Text, Time="" });
+            Debug.WriteLine(path);
+>>>>>>> f73264b0ffa49dad226370639744baa27edf3872
         }
 
         private void Show_Click(object sender, RoutedEventArgs e)

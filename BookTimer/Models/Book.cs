@@ -16,5 +16,12 @@ namespace BookTimer.Models
         public string SmallThumbnail { get; set; }
         
         public string Time { get; set; }
+
+        public Book(string Title, string Author, string smallThumbnail)
+        {
+            this.Author = Author;
+            this.Title = Title;
+            this.SmallThumbnail = SmallThumbnail;
+        }
     }
 }
