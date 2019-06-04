@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using BookTimer.Models;
+using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using System.Diagnostics;
-using BookTimer.Models;
 
 //Szablon elementu Pusta strona jest udokumentowany na stronie https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,11 +14,10 @@ namespace BookTimer.Views
 
     {
         DispatcherTimer timer = new DispatcherTimer();
-        Book chosenBook;
+        public static Book chosenBook = YourLibraryPage.chosenBook;
 
         public BookStopwatch()
         {
-            chosenBook = YourLibraryPage.chosenBook;
             System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
 
            this.InitializeComponent();
@@ -46,7 +33,7 @@ namespace BookTimer.Views
             timer.Start();
 
         }
-        private int seconds = 0, minutes = 0, hours = 0;
+        private int seconds = chosenBook.time, minutes = 0, hours = 0;
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
@@ -100,7 +87,7 @@ namespace BookTimer.Views
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
-            seconds = 0;
+            YourLibraryPage.chosenBook.time = seconds;
         }
 
     }
