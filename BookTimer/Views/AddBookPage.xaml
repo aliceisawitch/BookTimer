@@ -10,7 +10,7 @@
     Background="{ThemeResource AppBarBackgroundThemeBrush}">
     <Page.Resources>
         <DataTemplate x:Key="bookTemplate">
-            <StackPanel BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Stretch" Orientation="Horizontal">
+            <StackPanel  HorizontalAlignment="Stretch" Orientation="Horizontal">
                 <Image Margin="10" Source="{Binding SmallThumbnail}"/>
                 
                     <TextBlock Width="130" TextWrapping="WrapWholeWords" FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
