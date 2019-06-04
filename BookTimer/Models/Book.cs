@@ -29,6 +29,7 @@ namespace BookTimer.Models
             this.Title = Title;
             this.SmallThumbnail = smallThumbnail;
             this.timeSpan = TimeSpan.Zero;
+            this.time = 0;
         }
 
         public Book(int id, string title, string author, string smallThumbnail, int time)

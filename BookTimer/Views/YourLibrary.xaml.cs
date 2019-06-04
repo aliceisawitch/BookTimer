@@ -32,13 +32,9 @@ namespace BookTimer.Views
 
              
             this.InitializeComponent();
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
+            AddBookPage.adChosen.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
             
-
-            ListOFBooks.ItemsSource = books;
+            ListOFBooks.ItemsSource = AddBookPage.adChosen;
 
         }
 
