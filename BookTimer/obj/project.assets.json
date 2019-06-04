@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.15063": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -756,6 +770,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -2497,6 +2514,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-arm": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3452,6 +3483,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -5013,6 +5047,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-arm-aot": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -6004,6 +6052,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -7565,6 +7616,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-arm64-aot": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8543,6 +8608,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -10104,6 +10172,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-x64": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -11068,6 +11150,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -12629,6 +12714,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-x64-aot": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -13629,6 +13728,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -15190,6 +15292,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-x86": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -16154,6 +16270,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -17715,6 +17834,20 @@
       }
     },
     "UAP,Version=v10.0.15063/win10-x86-aot": {
+      "LiteDB/4.1.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/LiteDB.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -18715,6 +18848,9 @@
         "runtime": {
           "lib/netstandard1.2/System.Data.Common.dll": {}
         }
+      },
+      "System.Data.SQLite/1.0.110": {
+        "type": "package"
       },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
@@ -20277,6 +20413,25 @@
     }
   },
   "libraries": {
+    "LiteDB/4.1.4": {
+      "sha512": "g4g9JlHzRBZl+Gd2UbiRdszZ7t8wozU2wX7+5xY5uE79tmcgcDhha+ubAP84G1VLbwQmhBGCzRfIx+epLmJciQ==",
+      "type": "package",
+      "path": "litedb/4.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/LiteDB.dll",
+        "lib/net35/LiteDB.xml",
+        "lib/net40/LiteDB.dll",
+        "lib/net40/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.4.1.4.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.3.0": {
       "sha512": "P+MBhIM0YX+JqROuf7i306ZLJEjQYA9uUyRDE+OqwUI5sh41e2ZbPQV3LfAPh+29cmceE1pUffXsGfR4eMY3KA==",
       "type": "package",
@@ -26268,6 +26423,17 @@
         "system.data.common.nuspec"
       ]
     },
+    "System.Data.SQLite/1.0.110": {
+      "sha512": "D6+Bub5qmPCwALYnL/3lMPhF+yG55v5Ry0tA0fOMP5mq4aMSDcnqAF2bfwsLBBjgAaFNxIS3NXgm7IvqJQ7hqw==",
+      "type": "package",
+      "path": "system.data.sqlite/1.0.110",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.1.0.110.nupkg.sha512",
+        "system.data.sqlite.nuspec"
+      ]
+    },
     "System.Diagnostics.Contracts/4.3.0": {
       "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
       "type": "package",
@@ -30788,9 +30954,11 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.15063": [
+      "LiteDB >= 4.1.4",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.8",
       "Newtonsoft.Json >= 12.0.2",
-      "SQLite.Net-PCL >= 3.1.1"
+      "SQLite.Net-PCL >= 3.1.1",
+      "System.Data.SQLite >= 1.0.110"
     ]
   },
   "packageFolders": {
@@ -30830,6 +30998,10 @@
     "frameworks": {
       "uap10.0.15063": {
         "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "[4.1.4, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.8, )"
@@ -30841,6 +31013,10 @@
           "SQLite.Net-PCL": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "System.Data.SQLite": {
+            "target": "Package",
+            "version": "[1.0.110, )"
           }
         }
       }

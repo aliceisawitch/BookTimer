@@ -22,7 +22,7 @@ namespace BookTimer.Views
     public sealed partial class AddBookPage : Page
     {
         List<Book> books;
-        Database db = new Database();
+
         static Windows.Web.Http.HttpClient httpClient;
         public AddBookPage()
         {
@@ -73,6 +73,7 @@ namespace BookTimer.Views
             if (command.Label == "Yes")
             {
                 System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
+                Database db = new Database();
             }
             
         }

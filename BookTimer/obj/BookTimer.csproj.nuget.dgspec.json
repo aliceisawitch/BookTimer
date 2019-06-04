@@ -37,6 +37,10 @@
       "frameworks": {
         "uap10.0.15063": {
           "dependencies": {
+            "LiteDB": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.8, )"
@@ -48,6 +52,10 @@
             "SQLite.Net-PCL": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.110, )"
             }
           }
         }

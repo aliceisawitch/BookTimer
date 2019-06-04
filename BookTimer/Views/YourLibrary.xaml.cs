@@ -36,8 +36,6 @@ namespace BookTimer.Views
             books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
             books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
             books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-           db.Polacz().CreateTable<Book>();
-           var query= db.Polacz().Table<Book>();
             
 
             ListOFBooks.ItemsSource = books;
