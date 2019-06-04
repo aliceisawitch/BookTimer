@@ -40,7 +40,7 @@ namespace BookTimer.Views
            var query= db.Polacz().Table<Book>();
             
 
-            ListOFBooks.ItemsSource = books;
+            ListOFBooks.ItemsSource = query;
 
         }
 
