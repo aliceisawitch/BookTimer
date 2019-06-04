@@ -68,8 +68,8 @@
  
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" >
-            <ListView  Margin="5" Name="LbxBooks" Width="auto" Height="330"  ItemTemplate="{StaticResource bookTemplate}">
-            </ListView>
+            <ListBox  Margin="5" Name="LbxBooks" Width="auto" Height="330"  ItemTemplate="{StaticResource bookTemplate}" SelectionChanged="Add_Click">
+            </ListBox>
         </StackPanel>
 
         <Button Grid.Column="2" HorizontalAlignment="Right" Name="yourLibraryButton" VerticalAlignment="Bottom" Height="70" Width="70" Grid.Row="6" Click="YourLibraryButton_Click">

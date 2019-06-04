@@ -244,3 +244,4 @@ C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.
 C:\Users\Dell\source\repos\BookTimer\BookTimer\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw
 C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
 C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\SQLite.Net.dll
+C:\Users\Dell\source\repos\BookTimer\BookTimer\bin\x86\Debug\bookdb.sqlite

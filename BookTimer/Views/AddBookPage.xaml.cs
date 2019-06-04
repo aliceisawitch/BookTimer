@@ -77,9 +77,10 @@ namespace BookTimer.Views
             
         }
 
+        private void LbxBooks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-
-
+        }
     }
     }
 

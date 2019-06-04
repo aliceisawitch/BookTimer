@@ -32,7 +32,7 @@
         </StackPanel>
         
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-            <ListBox Height="475" x:Name="ListOFBooks">
+            <ListBox Height="475" x:Name="ListOFBooks" SelectedIndex="0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                     <StackPanel Margin="10" Orientation="Horizontal">

@@ -21,7 +21,7 @@ namespace BookTimer
 
 
         public string path;
-        public SQLite.Net.SQLiteConnection con;
+        public static SQLite.Net.SQLiteConnection con;
         public SQLite.Net.SQLiteConnection Polacz()
         {
             path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "bookdb.sqlite");
@@ -31,9 +31,6 @@ namespace BookTimer
            // con.CreateTable<Book>();
 
             return con;
-
-
-
 
         }
     }
