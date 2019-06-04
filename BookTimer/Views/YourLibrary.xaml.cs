@@ -18,9 +18,7 @@ using Windows.UI.Xaml.Navigation;
 
 namespace BookTimer.Views
 {
-    /// <summary>
-    /// Pusta strona, która może być używana samodzielnie lub do której można nawigować wewnątrz ramki.
-    /// </summary>
+
     public sealed partial class YourLibraryPage : Page
     {
         Database db = new Database();
@@ -51,12 +49,10 @@ namespace BookTimer.Views
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
 
-            
-            // db.createTable().Execute("DELETE FROM Book WHERE Id={0}");
-            
-
-           
-           
+            AddBookPage.adChosen.Remove((Book)ListOFBooks.SelectedItem);
+            ListOFBooks.ItemsSource = null;
+            ListOFBooks.ItemsSource = AddBookPage.adChosen;
+            ListOFBooks.SelectedItem = 0;
         }
 
         private void Watch_Click(object sender, RoutedEventArgs e)
