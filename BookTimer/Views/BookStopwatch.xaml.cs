@@ -19,8 +19,8 @@ namespace BookTimer.Views
         public BookStopwatch()
         {
             System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
-
-           this.InitializeComponent();
+           
+            this.InitializeComponent();
 
 
         }

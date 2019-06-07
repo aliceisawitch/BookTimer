@@ -75,7 +75,9 @@ namespace BookTimer.Views
             {
                 System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
                 Database db = new Database();
-                adChosen.Add((Book)LbxBooks.SelectedItem);
+                db.GetConnection();
+                db.AddBookToDB((Book)LbxBooks.SelectedItem);
+                db.Close();
             }
             
         }

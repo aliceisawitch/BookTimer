@@ -30,17 +30,12 @@ namespace BookTimer.Views
         public YourLibraryPage()
         {
 
-             
-            this.InitializeComponent();
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-            books.Add(new Book("Test Title", "Test Author", "http://books.google.com/books/content?id=V-zPAAAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"));
-           db.Polacz().CreateTable<Book>();
-           var query= db.Polacz().Table<Book>();
-            
 
-            ListOFBooks.ItemsSource = query;
+            this.InitializeComponent();
+            Database db = new Database();
+            db.GetConnection();
+            ListOFBooks.ItemsSource = db.getBooks();
+            db.Close();
 
         }
 
@@ -57,12 +52,16 @@ namespace BookTimer.Views
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
 
-            
-            // db.createTable().Execute("DELETE FROM Book WHERE Id={0}");
-            
 
-           
-           
+            Database db = new Database();
+            db.GetConnection();
+            db.DeleteBookFrDb((Book)ListOFBooks.SelectedItem);
+            ListOFBooks.ItemsSource = db.getBooks();
+            db.Close();
+
+
+
+
         }
 
         private void Watch_Click(object sender, RoutedEventArgs e)

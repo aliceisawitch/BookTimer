@@ -35,26 +35,36 @@ namespace BookTimer
 
         }
 
-        public static List<Book> getBooks()
+        public List<Book> getBooks()
         {
             var query = con.Table<Book>();
             List<Book> books = query.ToList<Book>();
             return books;
         }
 
-        public static Book getBook(string bookTitle)
+        public Book getBook(string bookTitle)
         {
             var query = con.Table<Book>().Where(a => a.Title.Equals(bookTitle)).FirstOrDefault();
             Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail, query.time);
             return book;
         }
-        public static Book getBook(int bookId)
+        public Book getBook(int bookId)
         {
             var query = con.Table<Book>().Where(a => a.Id.Equals(bookId)).FirstOrDefault();
             Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail, query.time);
             return book;
         }
-
-
+        public void Close()
+        {
+            con.Close();
+        }
+        public void AddBookToDB(Book book)
+        {
+            con.Insert(book);
+        }
+        public void DeleteBookFrDb(Book book)
+        {
+            con.Delete(book);
+        }
     }
 }
