@@ -7,10 +7,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource AppBarBackgroundThemeBrush}">
+    Background="{ThemeResource FocusVisualWhiteStrokeThemeBrush}">
     <Page.Resources>
         <DataTemplate x:Key="bookTemplate">
-            <StackPanel  HorizontalAlignment="Stretch" Orientation="Horizontal">
+            <StackPanel Background="White" HorizontalAlignment="Stretch" Orientation="Horizontal">
                 <Image Margin="10" Source="{Binding SmallThumbnail}"/>
                 
                     <TextBlock Width="130" TextWrapping="WrapWholeWords" FontSize="15" Margin="10" Text="{Binding Author}" TextAlignment="Right"/>
@@ -68,7 +68,7 @@
  
         </StackPanel>
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" >
-            <ListBox  Margin="5" Name="LbxBooks" Width="auto" Height="330"  ItemTemplate="{StaticResource bookTemplate}" SelectionChanged="Add_Click">
+            <ListBox Background="White" Margin="5" Name="LbxBooks" Width="auto" Height="330"  ItemTemplate="{StaticResource bookTemplate}" SelectionChanged="Add_Click">
             </ListBox>
         </StackPanel>
 

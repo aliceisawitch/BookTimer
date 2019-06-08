@@ -6,8 +6,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource AppBarBackgroundThemeBrush}">
+    Background="White">
+    <Page.Resources>
+        <DataTemplate x:Key="libraryTemplate">
+            <StackPanel Margin="10" Orientation="Horizontal">
+                <Image  Source="{Binding SmallThumbnail}"/>
+                <StackPanel Margin="10">
 
+                    <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="20"  x:Name="tbAuthorLib" Width="150" Text="{Binding Author}"  />
+                    <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="25" FontWeight="Bold" x:Name="tbTitleLib" Width="150" Text="{Binding Title}" />
+
+
+
+
+                </StackPanel>
+
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -32,24 +48,8 @@
         </StackPanel>
         
         <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
-            <ListBox Height="475" x:Name="ListOFBooks" SelectedIndex="0">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                    <Image  Source="{Binding SmallThumbnail}"/>
-                    <StackPanel Margin="10">
-                        
-                            <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="20"  x:Name="tbAuthorLib" Width="150" Text="{Binding Author}"  />
-                                <TextBlock TextWrapping="WrapWholeWords" Margin="15" FontSize="25" FontWeight="Bold" x:Name="tbTitleLib" Width="150" Text="{Binding Title}" />
-                           
-                           
-
-
-                        </StackPanel>
-                        
-                    </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+            <ListBox ItemTemplate="{StaticResource libraryTemplate}" Background="White" Height="475" x:Name="ListOFBooks" SelectedIndex="0">
+                
             </ListBox>
         </StackPanel>
         

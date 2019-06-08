@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource AppBarBackgroundThemeBrush}">
+    Background="{ThemeResource FocusVisualWhiteStrokeThemeBrush}">
     
 
 
@@ -38,10 +38,10 @@
             <Image Width="150" Source="/Assets/LibraryBackground.jpg"/>
         </StackPanel>
         <StackPanel Height="200" Grid.Row="2" Grid.Column="2">
-            <TextBlock x:Name="tbAutor" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Author"/>
-            <TextBlock x:Name="tbTytul" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="Title"/>
+            <TextBlock x:Name="tbAutor" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{Binding Author}" />
+            <TextBlock x:Name="tbTytul" Padding="5" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Text="{Binding Title}"/>
             <TextBlock Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" TextWrapping="WrapWholeWords" Text="Overall time spend on this title:"/>
-            <TextBlock x:Name="tbTimer" Padding="5" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Text="{Binding Time}"/>
+            <TextBlock x:Name="tbTimer" Padding="5" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Text="{Binding timeSpan}"/>
 
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="0">

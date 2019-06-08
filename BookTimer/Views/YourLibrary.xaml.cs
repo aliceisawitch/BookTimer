@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using BookTimer.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -44,29 +45,42 @@ namespace BookTimer.Views
             this.Frame.Navigate(typeof(AddBookPage));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       //// private void Button_Click(object sender, RoutedEventArgs e)
+       // {
+        //    this.Frame.Navigate(typeof(BookStopwatch));
+      //  }
+
+        private async void Delete_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BookStopwatch));
-        }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
+
+           
+            var messageDialog = new MessageDialog("Would you like to remove this book from your library?");
+            messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
+            messageDialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
+            await messageDialog.ShowAsync();
+           
+
+
+
+
+        }
+        private void removeFromDbInvokeHandler(IUICommand command)
         {
-
-
-            Database db = new Database();
-            db.GetConnection();
-            db.DeleteBookFrDb((Book)ListOFBooks.SelectedItem);
-            ListOFBooks.ItemsSource = db.getBooks();
-            db.Close();
-
-
-
-
+            if(command.Label=="Yes")
+            {
+                Database db = new Database();
+                db.GetConnection();
+                db.DeleteBookFrDb((Book)ListOFBooks.SelectedItem);
+                ListOFBooks.ItemsSource = db.getBooks();
+                db.Close();
+            }
+           
         }
-
         private void Watch_Click(object sender, RoutedEventArgs e)
         {
             chosenBook = (Book)ListOFBooks.SelectedItem;
+            
             this.Frame.Navigate(typeof(BookStopwatch));
         }
     }
