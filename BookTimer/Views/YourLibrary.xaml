@@ -9,7 +9,7 @@
     Background="White">
     <Page.Resources>
         <DataTemplate x:Key="libraryTemplate">
-            <StackPanel Margin="10" Orientation="Horizontal">
+            <StackPanel Margin="2" Orientation="Horizontal">
                 <Image  Source="{Binding SmallThumbnail}"/>
                 <StackPanel Margin="10">
 

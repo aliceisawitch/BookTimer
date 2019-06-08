@@ -81,7 +81,7 @@ namespace BookTimer.Views
         {
             chosenBook = (Book)ListOFBooks.SelectedItem;
             
-            this.Frame.Navigate(typeof(BookStopwatch));
+            this.Frame.Navigate(typeof(BookStopwatch),chosenBook);
         }
     }
 }
