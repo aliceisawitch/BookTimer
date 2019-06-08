@@ -14,13 +14,15 @@ namespace BookTimer.Views
 
     {
         DispatcherTimer timer = new DispatcherTimer();
-        public static Book chosenBook = YourLibraryPage.chosenBook;
+    
         
 
         public BookStopwatch()
         {
+            Book chosenBook = YourLibraryPage.chosenBook;
             System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
             this.DataContext = chosenBook;
+            
             this.InitializeComponent();
            System.Diagnostics.Debug.WriteLine( chosenBook.Author.ToString());
             
@@ -39,10 +41,11 @@ namespace BookTimer.Views
             timer.Start();
 
         }
-        private int seconds = chosenBook.time, minutes = 0, hours = 0;
+        private int  minutes=0,seconds = 0, hours = 0;
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
+          
             this.Frame.Navigate(typeof(YourLibraryPage));
             
         }
