@@ -17,6 +17,7 @@ namespace BookTimer.Models
         public string SmallThumbnail { get; set; }
 
         public int time;
+        public string BookTime { get; set; }
 
         public TimeSpan timeSpan { get; set; }
         public Book()

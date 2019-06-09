@@ -14,7 +14,7 @@ namespace BookTimer.Views
 
     {
         DispatcherTimer timer = new DispatcherTimer();
-    
+       
         
 
         public BookStopwatch()
@@ -97,7 +97,15 @@ namespace BookTimer.Views
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
-            YourLibraryPage.chosenBook.time = seconds;
+            string timerValue = tbTimer.Text;
+            Book chosenBook = YourLibraryPage.chosenBook;
+            Database db = new Database();
+            db.GetConnection();
+            System.Diagnostics.Debug.Write(timerValue);
+            db.UpdateBookRows(chosenBook,timerValue);
+            db.Close();
+           // YourLibraryPage.chosenBook.time = seconds;
+
         }
 
     }

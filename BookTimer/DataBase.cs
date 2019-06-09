@@ -66,5 +66,10 @@ namespace BookTimer
         {
             con.Delete(book);
         }
+        public void UpdateBookRows(Book book, string timer)
+        {
+            string sqlUpdate = "UPDATE Book SET BookTime='" + timer + "' WHERE Id='" + book.Id + "'";
+            con.Execute(sqlUpdate);
+        }
     }
 }
