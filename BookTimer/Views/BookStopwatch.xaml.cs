@@ -13,9 +13,11 @@ namespace BookTimer.Views
     public sealed partial class BookStopwatch : Page
 
     {
-        DispatcherTimer timer = new DispatcherTimer();
-       
-        
+       static DispatcherTimer timer = new DispatcherTimer();
+    
+        TimeSpan timeSpan =
+    timer.Interval = TimeSpan.FromSeconds(1);
+
 
         public BookStopwatch()
         {
@@ -33,12 +35,13 @@ namespace BookTimer.Views
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            TimeSpan timeSpan =
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Tick += timeTicker;
-            
+           
+                timer.Tick += timeTicker;
 
-            timer.Start();
+
+                timer.Start();
+            
+            
 
         }
         private int  minutes=0,seconds = 0, hours = 0;
@@ -53,6 +56,7 @@ namespace BookTimer.Views
         private void timeTicker(object sender, object e)
         {
             string time = "";
+           
             seconds++;
             if (seconds == 60)
             {
@@ -92,6 +96,7 @@ namespace BookTimer.Views
                 time += seconds; ;
             }
             tbTimer.Text = time;
+            
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
