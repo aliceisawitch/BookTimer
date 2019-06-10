@@ -44,7 +44,15 @@ namespace BookTimer.Views
             
 
         }
-        private int  minutes=0,seconds = 0, hours = 0;
+        static void getTimeSpanFromSeconds(int seconds)
+        {
+          
+            TimeSpan timeSpan = new TimeSpan(0,0,seconds);
+            
+           
+            System.Diagnostics.Debug.WriteLine(timeSpan.Add(TimeSpan.FromSeconds(seconds)));
+        }
+        private int seconds = YourLibraryPage.chosenBook.time;
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
@@ -55,47 +63,49 @@ namespace BookTimer.Views
 
         private void timeTicker(object sender, object e)
         {
-            string time = "";
+           
            
             seconds++;
-            if (seconds == 60)
-            {
-                minutes++;
-                seconds = 0;
-            }
-            if (minutes == 60)
-            {
-                hours++;
-                minutes = 0;
-            }
+            //if (seconds == 60)
+            //{
+            //    minutes++;
+            //    seconds = 0;
+            //}
+            //if (minutes == 60)
+            //{
+            //    hours++;
+            //    minutes = 0;
+            //}
 
-            if (hours < 10)
-            {
-                time += "0" + hours;
-            }
-            else
-            {
-                time += +hours;
-            }
-            time += ":";
-            if (minutes < 10)
-            {
-                time += "0" + minutes;
-            }
-            else
-            {
-                time += minutes;
-            }
-            time += ":";
-            if (seconds < 10)
-            {
-                time += "0" + seconds;
-            }
-            else
-            {
-                time += seconds; ;
-            }
-            tbTimer.Text = time;
+            //if (hours < 10)
+            //{
+            //    time += "0" + hours;
+            //}
+            //else
+            //{
+            //    time += +hours;
+            //}
+            //time += ":";
+            //if (minutes < 10)
+            //{
+            //    time += "0" + minutes;
+            //}
+            //else
+            //{
+            //    time += minutes;
+            //}
+            //time += ":";
+            //if (seconds < 10)
+            //{
+            //    time += "0" + seconds;
+            //}
+            //else
+            //{
+            //    time += seconds; ;
+            //}
+            // tbTimer.Text =time;
+            getTimeSpanFromSeconds(seconds);
+          
             
         }
 
@@ -107,9 +117,9 @@ namespace BookTimer.Views
             Database db = new Database();
             db.GetConnection();
             System.Diagnostics.Debug.Write(timerValue);
-            db.UpdateBookRows(chosenBook,timerValue);
+           // db.UpdateBookRows(chosenBook,timerValue);
             db.Close();
-           // YourLibraryPage.chosenBook.time = seconds;
+            YourLibraryPage.chosenBook.time = seconds;
 
         }
 

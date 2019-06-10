@@ -45,13 +45,13 @@ namespace BookTimer
         public Book getBook(string bookTitle)
         {
             var query = con.Table<Book>().Where(a => a.Title.Equals(bookTitle)).FirstOrDefault();
-            Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail );
+            Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail,query.time);
             return book;
         }
         public Book getBook(int bookId)
         {
             var query = con.Table<Book>().Where(a => a.Id.Equals(bookId)).FirstOrDefault();
-            Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail);
+            Book book = new Book(query.Id, query.Title, query.Author, query.SmallThumbnail,query.time);
             return book;
         }
         public void Close()
@@ -66,10 +66,10 @@ namespace BookTimer
         {
             con.Delete(book);
         }
-        public void UpdateBookRows(Book book, string timer)
+        public void UpdateBookRows(Book book)
         {
-            string sqlUpdate = "UPDATE Book SET BookTime='" + timer + "' WHERE Id='" + book.Id + "'";
-            con.Execute(sqlUpdate);
+            //string sqlUpdate = "UPDATE Book SET timeSpan='" + timer + "' WHERE Id='" + book.Id + "'";
+           // con.Execute(sqlUpdate);
         }
     }
 }
