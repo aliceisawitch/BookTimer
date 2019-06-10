@@ -17,7 +17,7 @@ namespace BookTimer.Views
     
         TimeSpan timeSpan =
     timer.Interval = TimeSpan.FromSeconds(1);
-
+        private bool isActive=false;
 
         public BookStopwatch()
         {
@@ -27,6 +27,7 @@ namespace BookTimer.Views
             
             this.InitializeComponent();
            System.Diagnostics.Debug.WriteLine( chosenBook.Author.ToString());
+            tbTimer.Text = ""+getTimeSpanFromSeconds(chosenBook.Time);
             
 
 
@@ -35,24 +36,28 @@ namespace BookTimer.Views
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-           
+           if(isActive==false)
+            {
+                timer.Tick -= timeTicker;
                 timer.Tick += timeTicker;
 
-
                 timer.Start();
-            
-            
+                isActive = true;
+
+            }
+
+
 
         }
-        static void getTimeSpanFromSeconds(int seconds)
+        static TimeSpan getTimeSpanFromSeconds(int seconds)
         {
           
             TimeSpan timeSpan = new TimeSpan(0,0,seconds);
-            
-           
-            System.Diagnostics.Debug.WriteLine(timeSpan.Add(TimeSpan.FromSeconds(seconds)));
+
+
+            return timeSpan;
         }
-        private int seconds = YourLibraryPage.chosenBook.time;
+        private int seconds = YourLibraryPage.chosenBook.Time;
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
@@ -66,60 +71,27 @@ namespace BookTimer.Views
            
            
             seconds++;
-            //if (seconds == 60)
-            //{
-            //    minutes++;
-            //    seconds = 0;
-            //}
-            //if (minutes == 60)
-            //{
-            //    hours++;
-            //    minutes = 0;
-            //}
+            
 
-            //if (hours < 10)
-            //{
-            //    time += "0" + hours;
-            //}
-            //else
-            //{
-            //    time += +hours;
-            //}
-            //time += ":";
-            //if (minutes < 10)
-            //{
-            //    time += "0" + minutes;
-            //}
-            //else
-            //{
-            //    time += minutes;
-            //}
-            //time += ":";
-            //if (seconds < 10)
-            //{
-            //    time += "0" + seconds;
-            //}
-            //else
-            //{
-            //    time += seconds; ;
-            //}
-            // tbTimer.Text =time;
-            getTimeSpanFromSeconds(seconds);
+           tbTimer.Text="" +getTimeSpanFromSeconds(seconds);
+            System.Diagnostics.Debug.WriteLine(seconds);
           
             
         }
 
         private void StopButton_Click(object sender, RoutedEventArgs e)
         {
+           int timerValue = seconds;
             timer.Stop();
-            string timerValue = tbTimer.Text;
+           
             Book chosenBook = YourLibraryPage.chosenBook;
             Database db = new Database();
             db.GetConnection();
-            System.Diagnostics.Debug.Write(timerValue);
-           // db.UpdateBookRows(chosenBook,timerValue);
+        
+            db.UpdateBookRows(chosenBook,timerValue);
             db.Close();
-            YourLibraryPage.chosenBook.time = seconds;
+            isActive = false;
+            //YourLibraryPage.chosenBook.Time = seconds;
 
         }
 

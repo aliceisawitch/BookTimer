@@ -77,11 +77,15 @@ namespace BookTimer.Views
             }
            
         }
-        private void Watch_Click(object sender, RoutedEventArgs e)
+        private  void Watch_Click(object sender, RoutedEventArgs e)
         {
-            chosenBook = (Book)ListOFBooks.SelectedItem;
+           
+                chosenBook = (Book)ListOFBooks.SelectedItem;
+
+                this.Frame.Navigate(typeof(BookStopwatch), chosenBook);
             
-            this.Frame.Navigate(typeof(BookStopwatch),chosenBook);
+      
+           
         }
     }
 }

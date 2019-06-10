@@ -16,7 +16,7 @@ namespace BookTimer.Models
         public string Author { get; set; }
         public string SmallThumbnail { get; set; }
         public TimeSpan timeSpan { get; set; }
-        public int time;
+        public int Time { get; set; }
 
 
 
@@ -32,7 +32,7 @@ namespace BookTimer.Models
             this.Title = Title;
             this.SmallThumbnail = smallThumbnail;
             this.timeSpan = TimeSpan.Zero;
-            this.time = 0;
+         //  this.time = 0;
            
 
         }
@@ -43,7 +43,7 @@ namespace BookTimer.Models
             Title = title;
             Author = author;
             SmallThumbnail = smallThumbnail;
-           
+            
             this.timeSpan = TimeSpan.FromSeconds((double)time); 
         }
         public override string ToString()
