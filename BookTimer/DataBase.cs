@@ -30,7 +30,6 @@ namespace BookTimer
 
             con = new SQLite.Net.SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(), path);
 
-           // con.CreateTable<Book>();
             return con;
 
         }
@@ -38,8 +37,16 @@ namespace BookTimer
         public List<Book> getBooks()
         {
             var query = con.Table<Book>();
-            List<Book> books = query.ToList<Book>();
-            return books;
+            try
+            {
+                List<Book> books = query.ToList<Book>();
+                return books;
+            }
+            catch (System.MissingMethodException ex)
+            {
+                return new List<Book>(); 
+            }
+            
         }
 
         public Book getBook(string bookTitle)

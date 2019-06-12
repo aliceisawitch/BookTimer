@@ -21,9 +21,11 @@ namespace BookTimer.Views
     /// 
     public sealed partial class AddBookPage : Page
     {
+        //list of books returned from API call
         List<Book> books;
+        // list of books added to User Library
         public static List<Book> adChosen = new List<Book>();
-
+        //htttpClient for api call
         static Windows.Web.Http.HttpClient httpClient;
         public AddBookPage()
         {
@@ -45,10 +47,13 @@ namespace BookTimer.Views
         {
             httpClient = new Windows.Web.Http.HttpClient();
             APIconnection apiConnection = new APIconnection(httpClient);
+            //asynchronous loading data from google Api
             Task waitForGoogleData = apiConnection.LoadGoogleData(tbAuthor.Text, tbTitle.Text);
             try
             {
+                //wait with list of books atribution untill api return list
                 await waitForGoogleData;
+                //list of books from GA
                 books = apiConnection.GetBooks();
                 //<log>
                 foreach (Book book in books)
@@ -60,8 +65,10 @@ namespace BookTimer.Views
             }
             catch (System.NullReferenceException ex) { };
         }
+
         private async void Add_Click(object sender, RoutedEventArgs e)
         {
+            //wait for user confimation
             var messageDialog = new MessageDialog("Would you like to add this book to your library?");
             messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.SaveToDbInvokedHandler)));
             messageDialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.SaveToDbInvokedHandler)));
@@ -73,7 +80,8 @@ namespace BookTimer.Views
         {
             if (command.Label == "Yes")
             {
-                System.Diagnostics.Debug.WriteLine(((Book)LbxBooks.SelectedItem).ToString());
+                System.Diagnostics.Debug.WriteLine("book selected to add to db:"+((Book)LbxBooks.SelectedItem).ToString());
+                //add chosen book to db 
                 Database db = new Database();
                 db.GetConnection();
                 db.AddBookToDB((Book)LbxBooks.SelectedItem);

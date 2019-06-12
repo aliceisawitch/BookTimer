@@ -9,6 +9,7 @@ namespace BookTimer.Models
 {
     public class Book
     {
+        // Book Model
         [PrimaryKey, AutoIncrement]
 
         public int Id { get; set; }
@@ -19,13 +20,12 @@ namespace BookTimer.Models
         public int Time { get; set; }
 
 
-
-
-    
         public Book()
         {
+            }
 
-        }
+    
+        //object constructors 
         public Book(string Title, string Author, string smallThumbnail)
         {
             this.Author = Author;
@@ -46,6 +46,7 @@ namespace BookTimer.Models
             
             this.timeSpan = TimeSpan.FromSeconds((double)time); 
         }
+        //Made for logging
         public override string ToString()
         {
            

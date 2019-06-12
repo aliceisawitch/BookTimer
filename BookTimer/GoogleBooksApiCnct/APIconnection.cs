@@ -31,9 +31,7 @@ namespace BookTimer.GoogleBooksApiCnct
             }
             catch (Exception ex)
             {
-                Windows.UI.Popups.MessageDialog dlgError = new Windows.UI.Popups.MessageDialog("Error: " + ex.Message + ex.HResult + "Data error");
-                await dlgError.ShowAsync();
-                App.Current.Exit();
+                System.Diagnostics.Debug.WriteLine("Error: " + ex.Message + ex.HResult + "Data error");
             }
             string googleData = dataGoogle;
             //System.Diagnostics.Debug.WriteLine("Books: " + dataGoogle);

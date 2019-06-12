@@ -54,11 +54,13 @@ namespace BookTimer.Views
         {
 
 
-           
-            var messageDialog = new MessageDialog("Would you like to remove this book from your library?");
-            messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
-            messageDialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
-            await messageDialog.ShowAsync();
+            if ((Book)ListOFBooks.SelectedItem != null)
+            {
+                var messageDialog = new MessageDialog("Would you like to remove this book from your library?");
+                messageDialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
+                messageDialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.removeFromDbInvokeHandler)));
+                await messageDialog.ShowAsync();
+            }
            
 
 
@@ -79,11 +81,19 @@ namespace BookTimer.Views
         }
         private  void Watch_Click(object sender, RoutedEventArgs e)
         {
-           
-                chosenBook = (Book)ListOFBooks.SelectedItem;
+            if ((Book)ListOFBooks.SelectedItem != null)
+            {
+                try
+                {
 
-                this.Frame.Navigate(typeof(BookStopwatch), chosenBook);
-            
+                    chosenBook = (Book)ListOFBooks.SelectedItem;
+
+                    this.Frame.Navigate(typeof(BookStopwatch), chosenBook);
+                }
+                catch (System.NullReferenceException ex)
+                {
+                }
+            }
       
            
         }

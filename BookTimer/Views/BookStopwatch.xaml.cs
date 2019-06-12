@@ -13,22 +13,30 @@ namespace BookTimer.Views
     public sealed partial class BookStopwatch : Page
 
     {
-       static DispatcherTimer timer = new DispatcherTimer();
-    
+        private int seconds;
+        static DispatcherTimer timer = new DispatcherTimer();
+
         TimeSpan timeSpan =
     timer.Interval = TimeSpan.FromSeconds(1);
-        private bool isActive=false;
+        private bool isActive = false;
 
         public BookStopwatch()
         {
-            Book chosenBook = YourLibraryPage.chosenBook;
-            System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
-            this.DataContext = chosenBook;
-            
-            this.InitializeComponent();
-           System.Diagnostics.Debug.WriteLine( chosenBook.Author.ToString());
-            tbTimer.Text = ""+getTimeSpanFromSeconds(chosenBook.Time);
-            
+            try
+            {
+                Book chosenBook = YourLibraryPage.chosenBook;
+                System.Diagnostics.Debug.WriteLine("Book Passed from Library: " + chosenBook.ToString());
+                this.DataContext = chosenBook;
+                seconds = YourLibraryPage.chosenBook.Time;
+                this.InitializeComponent();
+                System.Diagnostics.Debug.WriteLine(chosenBook.Author.ToString());
+                tbTimer.Text = "" + getTimeSpanFromSeconds(chosenBook.Time);
+            }
+            catch (System.NullReferenceException ex)
+            {
+        
+            }
+
 
 
 
@@ -36,7 +44,7 @@ namespace BookTimer.Views
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-           if(isActive==false)
+            if (isActive == false)
             {
                 timer.Tick -= timeTicker;
                 timer.Tick += timeTicker;
@@ -51,13 +59,13 @@ namespace BookTimer.Views
         }
         static TimeSpan getTimeSpanFromSeconds(int seconds)
         {
-          
-            TimeSpan timeSpan = new TimeSpan(0,0,seconds);
+
+            TimeSpan timeSpan = new TimeSpan(0, 0, seconds);
 
 
             return timeSpan;
         }
-        private int seconds = YourLibraryPage.chosenBook.Time;
+        
 
         private void LibraryNavigation_Click(object sender, RoutedEventArgs e)
         {
